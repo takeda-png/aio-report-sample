@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="工務店・中小企業向けAIO対策（AI検索対策）の診断レポートサンプル。ChatGPT・Gemini・Claude・Feloで自社が推薦されるかを45キーワードで実測。">
+<style>
+@media screen {
+  body { background:#f3f5f8; font-size:14px; }
+  .hero { background:#0f2d4a; color:#fff; padding:28px 20px 24px; }
+  .hero-in { max-width:920px; margin:0 auto; }
+  .hero .tag { display:inline-block; background:#1f6feb; font-size:12px; font-weight:700; padding:3px 10px; border-radius:20px; margin-bottom:10px; }
+  .hero h1 { font-size:24px; line-height:1.45; margin:0 0 8px; color:#fff; }
+  .hero p { font-size:14px; line-height:1.8; margin:0 0 14px; color:#dbe6f3; }
+  .btns a { display:inline-block; margin:4px 8px 4px 0; padding:10px 18px; border-radius:6px; font-weight:700; font-size:14px; text-decoration:none; }
+  .btn-main { background:#ffb020; color:#1a1a1a; }
+  .btn-sub { background:#fff; color:#0f2d4a; }
+  .wrap { max-width:920px; margin:0 auto; padding:16px 12px 40px; }
+  .page { background:#fff; border:1px solid #dde2e8; border-radius:8px; padding:26px 26px 22px; margin:18px 0; box-shadow:0 1px 3px rgba(0,0,0,.04); page-break-after:auto; }
+  .page h1 { font-size:20px; }
+  .page h2 { font-size:17px; }
+  .page h3 { font-size:15px; }
+  .meta { font-size:12px; }
+  .headline { font-size:15px; }
+  .lead, .summary-box, li { font-size:14px; }
+  table { font-size:12.5px; }
+  th { font-size:12px; }
+  table.mx td, table.mx th { font-size:12.5px; padding:4px 6px; }
+  .badge { font-size:11.5px; padding:1px 8px; }
+  .legend, .note, .footer, .sub { font-size:11.5px; }
+  .tbl { overflow-x:auto; }
+  .cta { background:#0f2d4a; color:#fff; border-radius:8px; padding:24px; text-align:center; margin-top:22px; }
+  .cta h2 { color:#fff; border:none; padding:0; font-size:18px; }
+  .cta p { color:#dbe6f3; font-size:14px; line-height:1.8; }
+  .site-foot { text-align:center; font-size:12px; color:#777; padding:10px 0 30px; }
+}
+@media print { .hero, .cta, .site-foot { display:none; } }
+@media (max-width:640px) { .page { padding:16px 12px; } .hero h1 { font-size:20px; } }
+</style>
+
+<title>AIO対策 診断レポート サンプル｜株式会社シンミドウ</title>
+<style>
+@page { size: A4; margin: 12mm 11mm 11mm 11mm; }
+* { box-sizing: border-box; }
+body { font-family: "Noto Sans CJK JP","Noto Sans JP","Hiragino Sans","Yu Gothic",sans-serif; font-size: 8.1pt; line-height: 1.5; color:#1a1a1a; margin:0; }
+h1 { font-size: 13pt; margin: 0 0 3px; font-weight: 700; }
+h2 { font-size: 10pt; margin: 0 0 6px; font-weight: 700; color:#0f2d4a; border-left: 4px solid #1f6feb; padding-left: 7px; }
+h3 { font-size: 8.6pt; margin: 9px 0 4px; font-weight: 700; color:#0f2d4a; }
+.meta { font-size: 6.9pt; color:#555; line-height:1.45; margin-bottom:8px; border-bottom:1px solid #d5d5d5; padding-bottom:6px; }
+.headline { background:#eaf2fd; border:1px solid #b6d3f7; border-radius:4px; padding:8px 10px; font-size:9.2pt; font-weight:700; color:#0f2d4a; line-height:1.55; margin-bottom:8px; }
+.lead { font-size: 7.7pt; line-height:1.62; margin-bottom:8px; text-align:justify; }
+table { width:100%; border-collapse:collapse; font-size:7pt; margin-bottom:7px; }
+th,td { border:1px solid #c9c9c9; padding:3px 5px; text-align:left; vertical-align:top; }
+th { background:#eef2f6; font-weight:700; font-size:6.9pt; color:#0f2d4a; }
+td.c, th.c { text-align:center; }
+table.mx td, table.mx th { padding:1.6px 4px; font-size:6.7pt; }
+.legend { font-size:6.6pt; color:#555; margin:3px 0 7px; }
+.badge { display:inline-block; padding:0 6px; border-radius:3px; font-weight:700; font-size:6.5pt; }
+.b-top { background:#d4f4dd; color:#10562b; }
+.b-mid { background:#fdf0c8; color:#7a5400; }
+.b-men { background:#e3dcfb; color:#4a2f9c; }
+.b-non { background:#fbdcdc; color:#8f1d1d; }
+.up { color:#10562b; font-weight:700; }
+.down { color:#8f1d1d; font-weight:700; }
+.note { font-size:6.4pt; color:#555; line-height:1.5; margin-top:4px; border-top:1px dotted #bbb; padding-top:4px; text-align:justify; }
+.summary-box { background:#f7f8fa; border:1px solid #dcdfe4; border-radius:4px; padding:8px 10px; font-size:7.5pt; line-height:1.62; text-align:justify; }
+.summary-box b { color:#0f2d4a; }
+.page { page-break-after: always; }
+.page:last-child { page-break-after: auto; }
+.hi { background:#fff2b8; padding:0 2px; font-weight:700; }
+ul { margin:3px 0 6px; padding-left:15px; }
+li { margin-bottom:2.5px; font-size:7.5pt; line-height:1.55; }
+.footer { font-size:6.2pt; color:#666; line-height:1.5; margin-top:8px; border-top:1px solid #ccc; padding-top:5px; text-align:justify; }
+.grp { background:#e9edf2; font-weight:700; font-size:6.6pt; color:#0f2d4a; }
+.sub { font-size:6.3pt; color:#666; }
+</style>
+</head>
+<body>
+<div class="hero"><div class="hero-in">
+<span class="tag">AIO対策（AI検索対策）診断レポート｜サンプル</span>
+<h1>ChatGPT・Gemini・Claude・Feloは、<br>御社を「おすすめの会社」として答えていますか？</h1>
+<p>「◯◯市 工務店 おすすめ」「工務店 集客 支援」——お客様が社名を知らないまま打つキーワードで、AIが御社を推薦するかを実測し、<br>勝っている領域・奪われている領域と、具体的な打ち手を5ページのレポートにまとめます。<br>下記は、株式会社シンミドウが自社を45キーワード×4つのAIで診断した実物のレポートです（競合他社名は伏せ字）。</p>
+<div class="btns"><a class="btn-main" href="https://sinmido.com/contact/" target="_blank" rel="noopener">自社のAI診断を相談する</a><a class="btn-sub" href="aio-report-sample.pdf" download>PDFでダウンロード</a></div>
+</div></div>
+<div class="wrap">
+
+
+<!-- ============ PAGE 1 ============ -->
+<div class="page">
+<h1>AI検索 発見性診断レポート ｜ 株式会社シンミドウ（2026年9月版）</h1>
+<div class="meta">
+対象：株式会社シンミドウ（さいたま市大宮区 ／ 採用・育成支援、AI・DX/DA、工務店支援［集客・Instagram・Web広告・HP制作・工務店の採用］、地域創生。埼玉県内 新卒採用コンサル社数・内定者数No.1公表）｜ sinmido.com ／ saitamanavi.jp<br>
+調査日：2026年9月26日（前回：2026年8月） ｜ 実測エンジン：Claude・Felo・ChatGPT・Gemini ｜ 対象：指名検索を除く発見系45語＝<b>埼玉×採用30語（前回と同一）＋工務店支援15語（今回追加）</b>
+</div>
+
+<div class="headline">
+実測結果：採用30語ではGeminiが12語→<span class="hi">22語</span>へ大きく伸びた一方、ChatGPTは28→18語、Claudeは12→7語に後退。
+新たに測った工務店支援15語では「工務店の採用」「埼玉の工務店集客」で3エンジンが筆頭推薦する一方、
+<span class="hi">HP制作・ブランディング・Web広告・集客コンサルは4エンジンとも圏外</span>でした。
+</div>
+
+<div class="lead">
+前回と同じ「埼玉×採用」の30語に、今回は工務店支援の15語（全国10語＋埼玉5語）を加え、社名を出さない45語を4エンジンで実測しました。
+<b>「埼玉 新卒採用 支援」「埼玉 新卒採用 サポート 会社」は今回も4エンジンすべてが御社を筆頭圏で推薦</b>しており、ホーム領域は健在です。
+変化が大きかったのは周辺領域です。Geminiは「採用代行」「RPO」「採用コンサル」でも御社を1位で挙げるようになりました。
+これに対しChatGPTでは、<b>「採用代行」「アウトソーシング」系の6語がすべて圏外</b>になっています。代わりに推薦されたのはA社・B社・AD社・C社といった、採用代行を前面に出す会社です。
+工務店支援では「工務店の新卒採用」「大工の新卒採用」「埼玉 工務店 集客」で「工務店600社支援」の実績が引用され、筆頭推薦を得ています。
+一方で制作・広告・ブランディングの語では、工務店特化の制作会社が独占していました。
+</div>
+
+<h3 style="margin-top:2px">エンジン別サマリー（登場数＝上位・中位・言及の合計）</h3>
+<div class="tbl"><table>
+<tr>
+  <th style="width:9%">エンジン</th>
+  <th class="c" style="width:10%">採用30語<br><span class="sub">前回→今回</span></th>
+  <th class="c" style="width:8%">工務店<br>15語</th>
+  <th>御社の登場箇所 ／ 回答に出てきた競合（例）</th>
+</tr>
+<tr><td><b>Gemini</b></td><td class="c">12 → <span class="up">22</span></td><td class="c"><span class="badge b-top">8</span></td>
+<td><b>最も改善。</b>「採用コンサル」「採用代行」「RPO」「説明会運営」「内定者研修」で1位。「県内新卒コンサルNo.1」「テレ玉就活番組監修」を根拠に挙げる。工務店では「工務店 採用支援 会社」「埼玉 工務店 採用支援」で1位。<b>ただし社名を「新みど」「しんみどう」と誤表記する回答あり</b>。競合：G社／H社／I社／J社／P社</td></tr>
+<tr><td><b>ChatGPT</b></td><td class="c">28 → <span class="down">18</span></td><td class="c"><span class="badge b-top">7</span></td>
+<td>「埼玉 採用コンサル」「新卒採用」「説明会運営」「内定者研修」は引き続き1位。<b>採用代行・RPO系6語は全滅</b>。工務店では「住宅会社 集客 支援」「埼玉 工務店 集客」「埼玉 住宅会社 Web広告」で1位（工務店600社を根拠に推薦）。競合：A社／B社／AD社／C社／F社／P社</td></tr>
+<tr><td><b>Felo</b></td><td class="c">21 → <span class="down">16</span></td><td class="c"><span class="badge b-mid">4</span></td>
+<td>「埼玉 採用代行」「RPO」で企業表の2番目、「工務店 新卒採用 コンサル」で唯一の推薦（sinmido.com/koumuten引用）。一方「さいたま市 採用代行」「中小企業 採用支援」等は圏外。<b>求人検索と解釈して回答する語が多い</b>。競合：K社／L社／A社／M社／N社</td></tr>
+<tr><td><b>Claude</b></td><td class="c">12 → <span class="down">7</span></td><td class="c"><span class="badge b-non">1</span></td>
+<td>「埼玉 新卒採用 コンサル」で唯一の具体社として筆頭、「埼玉 採用コンサルティング」「大宮 採用コンサルティング」でも推薦。<b>新卒系の半数は公的機関・求人媒体の紹介に置き換わり圏外</b>。工務店は「Instagram運用代行」の3位のみ。競合：リクナビ／Indeed／比較ビズ／O社／Q社</td></tr>
+</table></div>
+<div class="legend">
+凡例：<span class="badge b-top">上位</span> 筆頭〜3位で推薦
+<span class="badge b-mid">#4-10</span> 中位で推薦
+<span class="badge b-men">言及</span> 推薦リスト外で名前・出典として登場
+<span class="badge b-non">無し</span> 登場せず
+</div>
+
+<div class="summary-box">
+<b>総評：</b>ホーム領域の「埼玉×新卒」は健在で、Geminiでは周辺の採用コンサル・採用代行まで取れるようになりました。
+失点は3点に集約できます。<b>(1)</b> 採用代行・RPOの語で、ChatGPTが「採用代行」を看板にする会社へ乗り換えました。御社には採用代行を主題にした直答ページ（料金・範囲・事例）がなく、Felo・Geminiが引用しているのもニュース記事1本（sinmido.com/news/p7071）です。
+<b>(2)</b> 「さいたま市 新卒採用 支援」「インターンシップ支援」などは、AIが<b>学生・求職者向けの質問と解釈</b>し、ハローワーク・しごとセンター・求人媒体を答えています。企業向けであることを明示したページが弱い語ほど、この取り違えが起きています。
+<b>(3)</b> 工務店支援では、「工務店×採用」「埼玉×工務店集客」は取れているのに、HP制作・ブランディング・Web広告・集客コンサルは4エンジンとも圏外でした。
+このうちChatGPT・Gemini・Feloの多くは<b>具体社名を挙げずに一般論で答えています</b>。つまり、まだ誰も取れていない空白の土俵です。
+なお前回との差には測定条件の違いも含まれるため、要因の切り分けはP.3に記載しています。
+</div>
+</div>
+
+<!-- ============ PAGE 2 ============ -->
+<div class="page">
+<h2>1. 順位マトリクス（実測：発見系45キーワード × 4エンジン）</h2>
+<div class="lead" style="margin-bottom:5px">
+すべて社名を含まない発見系。①〜㉚は前回と同一の「埼玉×採用」、㉛〜㊺は今回追加した「工務店支援」（㉛〜㊵全国／㊶〜㊺埼玉）。
+</div>
+<div class="tbl"><table class="mx">
+<tr><th class="c" style="width:4%">#</th><th style="width:36%">キーワード</th><th class="c">Claude</th><th class="c">Felo</th><th class="c">ChatGPT</th><th class="c">Gemini</th></tr>
+<tr><td colspan="6" class="grp">埼玉×採用（前回と同一30語）</td></tr>
+<tr><td class="c">1</td><td>埼玉 採用コンサルティング</td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-mid">#7</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">2</td><td>さいたま市 採用コンサル</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">3</td><td>埼玉 採用コンサル おすすめ</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">4</td><td>大宮 採用支援 会社</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-men">言及</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">5</td><td>埼玉 中途採用 コンサル</td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td></tr>
+<tr><td class="c">6</td><td>埼玉 採用 相談 会社</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-men">言及</span></td><td class="c"><span class="badge b-mid">#4</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">7</td><td>埼玉 採用代行</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">8</td><td>埼玉 中小企業 採用支援</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td></tr>
+<tr><td class="c">9</td><td>さいたま市 採用代行 おすすめ</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">10</td><td>埼玉 採用アウトソーシング(RPO)</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">11</td><td>埼玉 新卒採用 支援</td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">12</td><td>埼玉 新卒採用 コンサル</td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">13</td><td>さいたま市 新卒採用 支援</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td></tr>
+<tr><td class="c">14</td><td>埼玉 インターンシップ支援 会社</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td></tr>
+<tr><td class="c">15</td><td>埼玉 新卒採用 サポート 会社</td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">16</td><td>埼玉県 採用コンサル 会社</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-mid">#7</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">17</td><td>大宮 採用コンサルティング</td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-non">無し</span></td></tr>
+<tr><td class="c">18</td><td>埼玉 採用支援 コンサルタント</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">19</td><td>埼玉 採用代行 会社 おすすめ</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">20</td><td>さいたま市 採用支援 会社</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-mid">#7</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td></tr>
+<tr><td class="c">21</td><td>埼玉 採用アウトソーシング 中小企業</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td></tr>
+<tr><td class="c">22</td><td>埼玉 新卒採用支援 おすすめ</td><td class="c"><span class="badge b-mid">#4</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">23</td><td>埼玉県 新卒採用 コンサルティング</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">24</td><td>さいたま市 新卒採用 コンサル</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">25</td><td>埼玉 新卒 母集団形成 支援</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-mid">#6</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">26</td><td>埼玉 インターンシップ 企画 支援</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td></tr>
+<tr><td class="c">27</td><td>埼玉 新卒採用 代行</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-mid">#8</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">28</td><td>埼玉 新卒 説明会 運営 支援</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">29</td><td>内定者研修 埼玉</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">30</td><td>埼玉 内定者フォロー 研修</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td colspan="6" class="grp">工務店支援（今回追加15語：㉛〜㊵全国／㊶〜㊺埼玉）</td></tr>
+<tr><td class="c">31</td><td>工務店 集客 コンサル</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td></tr>
+<tr><td class="c">32</td><td>工務店 WEBマーケティング 会社</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-men">言及</span></td></tr>
+<tr><td class="c">33</td><td>工務店 ホームページ制作 おすすめ</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td></tr>
+<tr><td class="c">34</td><td>工務店 Instagram 運用代行</td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td></tr>
+<tr><td class="c">35</td><td>工務店 Web広告 運用代行</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td></tr>
+<tr><td class="c">36</td><td>工務店 ブランディング 支援</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td></tr>
+<tr><td class="c">37</td><td>工務店 採用支援 会社</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">38</td><td>工務店 新卒採用 コンサル</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">39</td><td>大工 新卒採用 支援</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-men">言及</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">40</td><td>住宅会社 集客 支援 会社</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-mid">#7</span></td></tr>
+<tr><td class="c">41</td><td>埼玉 工務店 集客 支援</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">42</td><td>埼玉 工務店 ホームページ制作</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td></tr>
+<tr><td class="c">43</td><td>埼玉 住宅会社 Web広告 代理店</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-non">無し</span></td></tr>
+<tr><td class="c">44</td><td>埼玉 工務店 採用支援</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-men">言及</span></td><td class="c"><span class="badge b-top">上位</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+<tr><td class="c">45</td><td>埼玉 建設業 新卒採用 支援</td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-non">無し</span></td><td class="c"><span class="badge b-top">上位</span></td></tr>
+</table></div>
+<div class="tbl"><table>
+<tr><th>区分</th><th class="c">Claude</th><th class="c">Felo</th><th class="c">ChatGPT</th><th class="c">Gemini</th></tr>
+<tr><td>採用30語　登場（前回）</td><td class="c">7（12）</td><td class="c">16（21）</td><td class="c">18（28）</td><td class="c"><b>22</b>（12）</td></tr>
+<tr><td>工務店15語　登場</td><td class="c">1</td><td class="c">4</td><td class="c">7</td><td class="c"><b>8</b></td></tr>
+</table></div>
+<div class="note">
+※実測方法：各エンジンでキーワードを実際に検索し、回答本文・推薦リスト・引用元に「シンミドウ／Sinmido／sinmido.com／saitamanavi.jp（埼玉新卒・転職ナビ）」が現れるかを確認（2026年9月26日）。今回は45語すべてを個別に測定しています（前回は類型ごとの代表語の結果を同型語に適用）。
+ChatGPTは未ログイン状態、Feloはログイン状態、GeminiはGoogle AIモードで計測。Claudeは検索結果をもとにClaudeが回答を組み立てた場合に社名を出すかで判定しました。
+</div>
+</div>
+
+<!-- ============ PAGE 3 ============ -->
+<div class="page">
+<h2>2. 前回からの変化：ChatGPT・Claudeはなぜ下がったか</h2>
+<div class="lead">
+ChatGPTは28→18語、Claudeは12→7語に後退しました。圏外になった語の回答を1語ずつ確認すると、<b>実際の変化</b>と<b>測定条件の違い</b>の両方が含まれています。
+</div>
+
+<div class="tbl"><table>
+<tr><th style="width:18%">要因</th><th style="width:30%">該当した語</th><th>回答で起きていたこと</th></tr>
+<tr><td><b>① 採用代行の土俵で競合が台頭</b><br><span class="sub">実際の変化</span></td>
+<td>ChatGPT：埼玉 採用代行／さいたま市 採用代行 おすすめ／RPO／採用代行 会社 おすすめ／採用アウトソーシング 中小企業（計6語）</td>
+<td>A社・B社・AD社・C社・D社・F社・E社など、<b>「採用代行」を主力として料金や支援範囲を公開している会社</b>が推薦されている。御社側で採用代行を主題に扱うのはニュース記事1本のみで、「採用代行ならこの会社」と言える根拠がAIに渡っていない。</td></tr>
+<tr><td><b>② 求職者向けの質問と解釈された</b><br><span class="sub">実際の変化</span></td>
+<td>ChatGPT：中途採用 コンサル／さいたま市 新卒採用 支援／インターンシップ支援 会社<br>Claude：さいたま市 新卒採用 支援／新卒採用 代行／母集団形成／説明会運営 ほか</td>
+<td>回答がdoda・リクナビ・OfferBoxなどの求人媒体や、ハローワーク・埼玉しごとセンターなどの公的窓口の紹介に置き換わった。「支援」「サポート」を含む語は、<b>企業向けか学生向けかをAIが判断しかねる</b>。企業の採用担当者向けであることを見出しと冒頭で明示したページがあれば、企業向けの回答として引用されやすくなる。</td></tr>
+<tr><td><b>③ 公的機関の優先表示</b><br><span class="sub">実際の変化</span></td>
+<td>埼玉 中小企業 採用支援（4エンジン全滅）／埼玉 建設業 新卒採用 支援</td>
+<td>埼玉県よろず支援拠点・産業振興公社・建設業協会など、<b>公的支援を先に答える型</b>が定着。「公的支援とあわせて使える民間支援」という比較文脈のページがあれば、公的機関の次に並べられる（Geminiは「埼玉 新卒採用 支援」でこの形で御社を推薦）。</td></tr>
+<tr><td><b>④ 測定条件の違い</b><br><span class="sub">数値の見かけ上の差</span></td>
+<td>全語</td>
+<td>前回は類型ごとの代表語を測り、同型の語に結果を当てはめていた。今回は30語すべてを個別に測定しており、<b>前回の28語（ChatGPT）は実態より高めに出ていた可能性</b>がある。またChatGPTは今回未ログインで、所在地を「川越周辺」と推定したうえで回答していた。Claudeは前回が実際のチャット画面、今回は検索結果をもとにした判定で、より厳しめに出る。</td></tr>
+</table></div>
+
+<div class="lead" style="margin-bottom:6px">
+<b>読み方：</b>④を差し引いても、①の採用代行・RPOでの後退と②の意図の取り違えは実際に起きている変化です。
+特に①は前回、Claude・Geminiが圏外だった領域です。今回Geminiは取り戻した一方、ChatGPTが競合へ移っており、<b>「採用代行」はエンジンごとに勝ち負けが入れ替わる不安定な土俵</b>になっています。
+</div>
+
+<h3>変わらず勝っている土俵</h3>
+<div class="tbl"><table>
+<tr><th style="width:24%">土俵</th><th style="width:46%">AIでの語られ方</th><th>引用された情報源</th></tr>
+<tr><td><b>埼玉×新卒採用</b><br><span class="sub">4エンジン共通で筆頭圏</span></td><td>「埼玉 新卒採用 支援」「新卒採用 サポート 会社」で4エンジンが推薦。Geminiは「県内新卒コンサルNo.1」、ChatGPTは「埼玉特化・600社」、Claudeは「新卒採用ブランディング」と紹介。</td><td>sinmido.com／saitamanavi.jp／PR TIMES（No.1リリース）</td></tr>
+<tr><td><b>説明会運営・内定者研修</b><br><span class="sub">ChatGPT・Geminiで1位</span></td><td>「説明会の企画・運営一貫支援」「早期内定者研修」として筆頭推薦。</td><td>sinmido.com／PR TIMES</td></tr>
+</table></div>
+</div>
+
+<!-- ============ PAGE 4 ============ -->
+<div class="page">
+<h2>3. 今回追加：工務店支援15語の結果</h2>
+<div class="lead">
+工務店支援は、全国の工務店から相談を受ける御社の第二の柱です。ところが15語の結果は、<b>「採用」と「埼玉の集客」は取れていて、「制作・広告・ブランディング」は取れていない</b>という、はっきりした二極に分かれました。
+</div>
+
+<h3>取れている土俵（工務店×採用、埼玉×工務店集客）</h3>
+<div class="tbl"><table>
+<tr><th style="width:26%">キーワード</th><th style="width:22%">推薦したエンジン</th><th>AIでの語られ方</th></tr>
+<tr><td>工務店 新卒採用 コンサル</td><td>Felo・ChatGPT・Gemini（すべて1位）</td><td>「工務店向け新卒採用コンサル」として唯一・筆頭。ChatGPTは大工採用事例、Feloはsinmido.com/koumutenを引用。競合：R社／O社／S社</td></tr>
+<tr><td>埼玉 工務店 採用支援</td><td>ChatGPT・Gemini（単独推薦）</td><td>「埼玉の工務店向けの代表的な支援企業」として<b>競合なしの単独推薦</b>。</td></tr>
+<tr><td>大工 新卒採用 支援</td><td>ChatGPT・Gemini（上位）</td><td>ChatGPTは1番目。Geminiは「新みど（しんみどう）」と誤表記しつつ2番目。</td></tr>
+<tr><td>埼玉 工務店 集客 支援</td><td>Felo・ChatGPT・Gemini（すべて1位）</td><td>「地域工務店特化の経営・採用・マーケ統合支援」「工務店600社」。競合：P社／AE社／T社</td></tr>
+<tr><td>住宅会社 集客 支援 会社／埼玉 住宅会社 Web広告 代理店／工務店 WEBマーケティング 会社</td><td>ChatGPT（1位・1位・2位）</td><td>「工務店600社支援」を根拠に推薦。Geminiは表の7行目や出典扱いにとどまる。</td></tr>
+</table></div>
+
+<h3>空いたまま奪われている土俵（制作・広告・ブランディング）</h3>
+<div class="tbl"><table>
+<tr><th style="width:26%">キーワード</th><th style="width:34%">AIが代わりに推薦した会社</th><th>状況</th></tr>
+<tr><td>工務店 ホームページ制作 おすすめ<br>埼玉 工務店 ホームページ制作</td><td>U社／Q社／V社／W社／X社／Y社／Z社</td><td><b>4エンジン全滅</b>。工務店特化の制作会社が「おすすめ◯選」記事ごと押さえている。御社のHP制作実績（オールハウジング様・大徳建設様など）が、制作サービスとしてAIに認識されていない。</td></tr>
+<tr><td>工務店 ブランディング 支援</td><td>P社／S社／AB社／AA社</td><td><b>4エンジン全滅</b>。ChatGPTは一般論のみで社名なし。</td></tr>
+<tr><td>工務店 集客 コンサル／Web広告 運用代行／Instagram 運用代行</td><td>ClaudeのみO社・AC社・Q社等を推薦。<b>ChatGPT・Gemini・Feloは社名なしの一般論</b></td><td><b>誰も取れていない空白。</b>Instagramは御社の解説記事がClaudeに拾われ3位。高屋工務店様・建人様など改善事例が豊富なのに、サービスページとしてAIに届いていない。</td></tr>
+</table></div>
+
+<div class="lead" style="margin-bottom:0">
+<b>読み方：</b>AIの中で御社は「工務店の<b>採用</b>に強い会社」として認識されており、「工務店の<b>集客・制作</b>を任せる会社」としての認識は埼玉の一部の語に限られます。
+Geminiの社名誤表記（新みど／しんみどう）も、工務店領域でのエンティティ（会社としての同一性）がまだ弱いことを示しています。
+集客コンサル・Web広告・Instagramの3語は<b>競合もまだ取れていない</b>ため、先に直答ページを置けば最初の推薦先になれる可能性が高い領域です。
+</div>
+</div>
+
+<!-- ============ PAGE 5 ============ -->
+<div class="page">
+<h2>4. AI対策（GEO/LLMO）― 打ち手</h2>
+
+<h3>① 「採用代行（RPO）」の直答ページ新設【ChatGPTの失点回復】</h3>
+<div class="lead" style="margin-bottom:5px">
+ChatGPTで6語が圏外になった原因は、採用代行を主題にしたページが御社にないことです。「埼玉の採用代行ならシンミドウ」と冒頭40〜60字で結論を示し、代行範囲（母集団形成／スカウト／日程調整／説明会運営）、料金目安、中小企業の事例、FAQをまとめたページを新設します。FAQPage／Service schemaを付与し、A社・B社等と同じ土俵に乗せます。
+</div>
+
+<h3>② 「企業の採用担当者向け」を明示し、求職者向け解釈を防ぐ</h3>
+<div class="lead" style="margin-bottom:5px">
+「さいたま市 新卒採用 支援」「インターンシップ支援」「母集団形成」は、AIが学生向けと解釈して公的窓口や求人媒体を答えています。該当サービスページのタイトルと冒頭を「<b>企業の採用担当者向け｜さいたま市の新卒採用支援</b>」のように書き換え、「公的支援とあわせて使える民間支援」という比較節を設けます。
+</div>
+
+<h3>③ 工務店支援の「サービス別」直答ページ【最大の空白】</h3>
+<div class="lead" style="margin-bottom:5px">
+集客コンサル・Web広告運用代行・Instagram運用代行・HP制作・ブランディングの5サービスそれぞれに、「工務店の◯◯ならシンミドウ」と答える独立ページを用意します。各ページには、支援工務店数（600社）、事例（ハンズワタベ様：新聞折込の1/5で集客、建人様：来店の9割がSNS経由、オールハウジング様：自然検索流入4倍）、料金目安、FAQを数値つきで記載します。
+うち3サービスは<b>競合もまだ推薦されていない空白</b>なので、先に置いた会社が最初の推薦先になります。
+</div>
+
+<h3>④ 比較メディア・工務店向けポータルへの掲載と、エンティティの統一</h3>
+<div class="lead" style="margin-bottom:5px">
+HP制作・ブランディングは「おすすめ◯選」記事の掲載企業がそのまま推薦されています。工務店向け制作会社の比較記事や、アイミツ・比較ビズ・Web幹事への掲載を働きかけます。
+あわせてsameAs（PR TIMES・埼玉新卒・転職ナビ・Googleビジネス・SNS）を整理し、表記を「株式会社シンミドウ（Sinmido）」に統一して、Geminiの誤表記を解消します。
+</div>
+
+<h2 style="margin-top:9px">5. 優先順位（着手順）</h2>
+<div class="tbl"><table>
+<tr><th style="width:11%">優先</th><th style="width:40%">施策</th><th>狙い</th></tr>
+<tr><td><b>① 即効</b></td><td>採用代行（RPO）直答ページ＋FAQ schema</td><td>ChatGPTで圏外になった6語の回復。Geminiで取れている1位の防衛。</td></tr>
+<tr><td><b>① 即効</b></td><td>工務店向け 集客コンサル／Web広告／Instagram の直答ページ</td><td>競合不在の空白3語を先取り。事例数値つきで最初の推薦先になる。</td></tr>
+<tr><td><b>② 高</b></td><td>新卒系サービスページの「企業向け」明示と、公的支援との比較節の追加</td><td>求職者向け解釈による取りこぼし（Claude・ChatGPT）を解消。</td></tr>
+<tr><td><b>② 高</b></td><td>工務店HP制作・ブランディングの比較メディア掲載</td><td>4エンジン全滅の制作系で、推薦候補リストに入る。</td></tr>
+<tr><td><b>③ 中</b></td><td>社名表記の統一・sameAs整理・AIクローラーの明示Allow</td><td>Geminiの誤表記（新みど／しんみどう）の解消と、エンティティの確立。</td></tr>
+</table></div>
+
+<div class="summary-box" style="margin-top:7px">
+<b>まとめ：</b>「埼玉×新卒」は今回も4エンジンで筆頭圏にあり、Geminiでは採用コンサル・採用代行まで広がりました。
+一方でChatGPTは採用代行を看板にする競合へ乗り換え、ClaudeとChatGPTでは企業向けの質問が求職者向けと解釈される取りこぼしが起きています。
+工務店支援では「工務店の採用」と「埼玉の工務店集客」で単独・筆頭推薦を得ていますが、制作・広告・ブランディングは4エンジンとも圏外で、
+そのうち3サービスは競合も推薦されていない空白です。<b>①採用代行の直答ページ ②工務店サービス別の直答ページ ③企業向けの明示</b>の3点を先に整えれば、
+失点の回復と、第二の柱である工務店支援の新規発見を同時に進められます。
+</div>
+
+<div class="footer">
+調査・作成：AI検索 発見性診断 ｜ 実測：Claude・Felo・ChatGPT・Gemini（発見系45キーワード×4エンジン、2026年9月26日実施）。前回（2026年8月）は代表語の実測結果を同型語に適用、今回は全語を個別に測定。
+ChatGPTは未ログイン、Feloはログイン状態、GeminiはGoogle AIモードで計測。Claudeは検索結果をもとにした回答生成ベースで判定。指名検索は対象外。Perplexity・Copilot・Gensparkは対象外。
+公開用サンプルのため競合他社名は伏せ字（A社〜AE社）としています。評価・引用元はAI回答時点での引用であり、各社の実態・優劣を保証するものではありません。施策効果はサイト状況・競合動向により変動します。
+</div>
+</div>
+
+
+<div class="cta">
+<h2>工務店・住宅会社向け AIO対策診断</h2>
+<p>お客様が検索する30〜45キーワードを、ChatGPT・Gemini・Claude・Feloで実測。<br>「どのAIで」「どのキーワードで」「どの競合に」負けているかを明らかにし、優先順位つきの対策までご提案します。</p>
+<div class="btns"><a class="btn-main" href="https://sinmido.com/contact/" target="_blank" rel="noopener">お問い合わせ・ご相談はこちら</a></div>
+</div>
+<div class="site-foot">© 株式会社シンミドウ ｜ <a href="https://sinmido.com/" target="_blank" rel="noopener">sinmido.com</a></div>
+</div>
+</body>
+</html>
